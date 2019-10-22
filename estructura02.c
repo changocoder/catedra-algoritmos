@@ -3,7 +3,6 @@
 #define n 2
 
 int i;
-int j;
 
 typedef struct{
 
@@ -13,14 +12,12 @@ float precio;
 
 }Productos;
 
-int fflush(FILE *stream);
+
 
 
 
 int main(){
 Productos listado[5];
-int i=0;
-
 
 for(i=0;i<n;i=i+1){
 
