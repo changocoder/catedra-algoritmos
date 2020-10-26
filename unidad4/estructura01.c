@@ -14,7 +14,7 @@ typedef struct{
 int main(){
 ///Declaracion de una variable Estructura
 Alumno var1;
-Alumno V[DIMENSION];
+Alumno listadoAlumnos[DIMENSION];
 
 
 ///asiganacion
