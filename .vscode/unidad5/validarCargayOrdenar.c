@@ -39,8 +39,7 @@ void mostrarListaNumeros(int v[SIZE]){
             printf("La posicion %d tiene el valor %d \n",i,v[i]);
         }
 }
-
-void ordenar(int vec[SIZE]){
+e
     int temp = 0;
 
     for (i=1;i<SIZE;i++)
