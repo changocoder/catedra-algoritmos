@@ -2,12 +2,15 @@
 #define DIMENSION 12
 int i;
 int j;
-int busquedaBinaria(int  vector[], int n, int dato) {
-	   int centro,inf=0,sup=n-1;
-	   while(inf<=sup){
+
+int busquedaBinaria(int  vector[], int dato) {
+	   int centro;
+	   int inf=0;
+	   int sup=DIMENSION-1;
+
+	   while( inf <= sup ){
 	        centro=((sup-inf)/2)+inf;
-	
-			if(vector[centro]==dato)
+			if(vector[centro] == dato)
 				 return centro;
 			else if(dato < vector[centro]) 
 					 sup=centro-1;
@@ -16,6 +19,19 @@ int busquedaBinaria(int  vector[], int n, int dato) {
 			}
 	   return -1;
 	} 
+
+int busquedaSecuencial( int vector[], int datoBuscado){
+
+	for( i=0 ; i < DIMENSION; i++){
+		
+		if( vector[i] == datoBuscado)
+			return i;
+
+		}
+	    
+		return -1;
+
+	}
 
 void mostrarListaNumeros(int v[DIMENSION]){
 //system("cls");
@@ -43,11 +59,11 @@ void ordenar(int vec[DIMENSION]){
 	}
 
 int ingresoDatoBuscado(){
-	int dato;
+	int valorBuscado;
 	printf("Ingrese el dato a Buscar:");
-	scanf("%d",&dato);
+	scanf("%d",&valorBuscado);
 
-	return dato;
+	return valorBuscado;
 }
 
 int main(){
@@ -56,14 +72,12 @@ int main(){
 	ordenar(array);
 	mostrarListaNumeros(array);
 	int dato = ingresoDatoBuscado();
-	
-	if( busquedaBinaria( array, DIMENSION, dato) != -1)
-		printf(" Se encontro el dato buscado en la posicion -%d- ", busquedaBinaria( array, DIMENSION, dato) );
+	int resultado =	busquedaBinaria( array, dato );
+
+	if(resultado != -1)
+		printf(" Se encontro el dato buscado en la posicion -%d- ",resultado );
 	else
 		printf("El dato buscado nose encontro");
-
-
-
 
 
 	return 0;
