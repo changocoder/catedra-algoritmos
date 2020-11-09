@@ -39,11 +39,11 @@ void mostrarListaNumeros(int v[SIZE]){
             printf("La posicion %d tiene el valor %d \n",i,v[i]);
         }
 }
-e
+void ordenar(int vec[SIZE]){
     int temp = 0;
 
     for (i=1;i<SIZE;i++)
-{
+     {
        for (j=0; j < SIZE-i ;j++) // for(j=0; j < Nelementos-i; j++) es menor y no menor igual
        {
           if (vec[j] < vec[j+1])//Condicion mayor-menor
@@ -53,7 +53,7 @@ e
             vec[j+1] = temp;
           }
        }
-}
+     }
 
 }
 
